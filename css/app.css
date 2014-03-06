@@ -1,0 +1,127 @@
+body {
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activityView, .dayView {
+  width: 180px;
+  float: left;
+  margin-right: 20px;
+}
+
+.activityViewList {
+  height: 400px;
+  width: 170px;
+  border: 4px dashed #efefef;
+}
+.dayView .activityViewList {
+  height: 307px;
+}
+
+.dayViewInfo {
+  width: 120px;
+  float: left;
+}
+.dayViewInfo input {
+  width: 40px;
+}
+.dayViewDistribution {
+  width: 40px;
+  float: left;
+  height: 100px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.distributionViewItem {
+  width: 100%;
+}
+
+.distributionViewItem.divider {
+  height: 2px;
+  background: red;
+  position: absolute;
+  margin-left: -20%;
+  bottom: 30px;
+  width: 140%;
+}
+
+.distributionViewItem.Break {
+  background: lightyellow;
+}
+.distributionViewItem.Presentation {
+  background: lightblue;
+}
+.distributionViewItem.Discussion {
+  background: lightgreen;
+}
+.distributionViewItem.Group-Work {
+  background: pink;
+}
+
+.js-overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index:1001;
+  -moz-opacity: 0.8;
+  opacity:.80;
+  filter: alpha(opacity=80);
+}
+.js-popup {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid lightgreen;
+  background-color: white;
+  z-index:1002;
+  overflow: auto;
+}
+.activityViewList {
+  clear: both;
+}
+
+.activityViewItem {
+  display: table-row;
+}
+.activityViewItemLength {
+  display: table-cell;
+  padding: 1px 3px;
+}
+.activityViewItemName {
+  display: table-cell;
+  width: 100%;
+  padding: 1px 3px;
+}
+
+.activityViewItemName.Break {
+  background: lightyellow;
+  border: 1px solid yellow;
+}
+.activityViewItemName.Presentation {
+  background: lightblue;
+  border: 1px solid blue;
+}
+.activityViewItemName.Discussion {
+  background: lightgreen;
+  border: 1px solid green;
+}
+.activityViewItemName.Group-Work {
+  background: pink;
+  border: 1px solid red;
+}
+
+.agendaViewHeaderButton {
+  margin-top: 200px;
+}
