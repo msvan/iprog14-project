@@ -1,11 +1,15 @@
 function DistributionView($target, model) {
   this.$el = $target;
+
   // Re-render the activity list.
   this.render = function() {
     var totalLength = model.getTotalLength();
-    // Clear the old html.
-    $target.html('');
-    $target.append('<div class="distributionViewItem divider">');
+
+    // Clear and render divider.
+    $target
+      .html('')
+      .append('<div class="distributionViewItem divider">');
+
     // Create a distribution element for each type.
     $.each(ActivityType, function(idx, type) {
       var length = model.getLengthByType(idx);
@@ -15,6 +19,5 @@ function DistributionView($target, model) {
       $target.append('<div class="distributionViewItem '+type.replace(' ', '-')+'" style="height: '+percentage+'px">');
     });
   }
-  this.render();
 }
 

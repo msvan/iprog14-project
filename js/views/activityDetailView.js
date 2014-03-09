@@ -7,7 +7,11 @@ function ActivityDetailView($target, model) {
       typeid: model.getTypeId(),
       description: model.getDescription()
   } : { name: '', length: '', type: '', typeid: '', description: '' };
+
+  // Render it to the DOM.
   this.$el = $(tmpl('activityDetailViewTmpl', obj)).appendTo($target);
+
+  // Take out elements.
   this.$form = this.$el.find('.js-form');
   this.$cancelButton = this.$el.find('.js-cancel');
 }
