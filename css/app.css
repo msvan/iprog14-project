@@ -21,7 +21,7 @@ ul {
   border: 4px dashed #efefef;
 }
 .dayView .activityViewList {
-  height: 307px;
+  height: 315px;
 }
 
 .dayViewInfo {
@@ -66,6 +66,48 @@ ul {
   background: rgba(245, 229, 192, 0.7);
 }
 
+.js-end-time {
+  font-weight: bolder;
+}
+
+.js-total-length{
+  font-weight: bolder;
+}
+
+.js-cancel, .js-save{
+
+  -moz-box-shadow:inset 1px 0px 0px 0px #adadad;
+  -webkit-box-shadow:inset 1px 0px 0px 0px #adadad;
+  box-shadow:inset 1px 0px 0px 0px #adadad;
+  background-color:#e0e0e0;
+  -webkit-border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px;
+  border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px;
+  border-bottom-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0px;
+  border:1px solid #999999;
+  display:inline-block;
+  margin-bottom: 10px;
+  color:#777777;
+  font-family:'Patua One';
+  font-size:13px;
+  font-weight:bold;
+  font-style:normal;
+  line-height:25px;
+  width:60px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #e3e3e3;
+}
+
 .js-overlay {
   position: absolute;
   top: 0%;
@@ -85,7 +127,7 @@ ul {
   width: 50%;
   height: 50%;
   padding: 16px;
-  border: 16px solid lightgreen;
+  border: 16px solid rgba(70, 137, 102, 0.8);
   background-color: white;
   z-index:1002;
   overflow: auto;
@@ -104,7 +146,7 @@ ul {
 .activityViewItemName {
   display: table-cell;
   width: 100%;
-  padding: 1px 3px;
+  padding: 3px;
 }
 
 .activityViewItemName.Break {
@@ -152,20 +194,19 @@ ul {
   font-size:13px;
   font-weight:bold;
   font-style:normal;
-  height:35px;
   line-height:35px;
   width:100px;
   text-decoration:none;
   text-align:center;
   text-shadow:1px 1px 0px #e3e3e3;
-}.agendaViewHeaderButton:hover {
+}
+.agendaViewHeaderButton:hover {
   background-color:#d1d1d1;
-}.agendaViewHeaderButton:active {
+}
+.agendaViewHeaderButton:active {
   position:relative;
   top:1px;
 }
-
-
 
 .activityViewHeaderButton {
   -moz-box-shadow:inset 1px 0px 0px 0px #adadad;
@@ -193,16 +234,24 @@ ul {
   font-size:13px;
   font-weight:bold;
   font-style:normal;
-  height:35px;
   line-height:35px;
   width:100px;
   text-decoration:none;
   text-align:center;
   text-shadow:1px 1px 0px #e3e3e3;
-}.activityViewHeaderButton:hover {
+}
+.activityViewHeaderButton:hover {
   background-color:#d1d1d1;
-}.activityViewHeaderButton:active {
+}
+.activityViewHeaderButton:active {
   position:relative;
   top:1px;
+}
+
+.titleDiv h1{
+  font-family:'Patua One';
+  color: grey;
+  -webkit-margin-before: 0.1em;
+  -webkit-margin-after: 0.5em;
 }
 /* This button was generated using CSSButtonGenerator.com */
