@@ -1,5 +1,6 @@
 body {
   padding: 20px;
+  font-family: 'Josefin Sans';
 }
 
 ul {
@@ -26,6 +27,7 @@ ul {
 .dayViewInfo {
   width: 120px;
   float: left;
+  margin-right: 15px;
 }
 .dayViewInfo input {
   width: 40px;
@@ -34,7 +36,7 @@ ul {
   width: 40px;
   float: left;
   height: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 39px;
   position: relative;
 }
 
@@ -52,16 +54,16 @@ ul {
 }
 
 .distributionViewItem.Break {
-  background: lightyellow;
+  background: rgba(234, 96, 69, 0.7);
 }
 .distributionViewItem.Presentation {
-  background: lightblue;
+  background: rgba(248, 202, 77, 0.7);
 }
 .distributionViewItem.Discussion {
-  background: lightgreen;
+  background: rgba(63, 86, 102, 0.7);
 }
 .distributionViewItem.Group-Work {
-  background: pink;
+  background: rgba(245, 229, 192, 0.7);
 }
 
 .js-overlay {
@@ -106,22 +108,101 @@ ul {
 }
 
 .activityViewItemName.Break {
-  background: lightyellow;
-  border: 1px solid yellow;
+  background: rgba(234, 96, 69, 0.7);
+  border: 1px #FFA644;
 }
 .activityViewItemName.Presentation {
-  background: lightblue;
-  border: 1px solid blue;
+  background: rgba(248, 202, 77, 0.7);
+  border: 1px #2C594F;
 }
 .activityViewItemName.Discussion {
-  background: lightgreen;
-  border: 1px solid green;
+  background: rgba(63, 86, 102, 0.7);
+  border: 1px #002D40;
 }
 .activityViewItemName.Group-Work {
-  background: pink;
-  border: 1px solid red;
+  background: rgba(245, 229, 192, 0.7);
+  border: 1px #E64661;
 }
 
+
 .agendaViewHeaderButton {
+  -moz-box-shadow:inset 1px 0px 0px 0px #adadad;
+  -webkit-box-shadow:inset 1px 0px 0px 0px #adadad;
+  box-shadow:inset 1px 0px 0px 0px #adadad;
+  background-color:#e0e0e0;
+  -webkit-border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px;
+  border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px;
+  border-bottom-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0px;
+  border:1px solid #999999;
+  display:inline-block;
+  margin-bottom: 10px;
   margin-top: 200px;
+  color:#777777;
+  font-family:'Patua One';
+  font-size:13px;
+  font-weight:bold;
+  font-style:normal;
+  height:35px;
+  line-height:35px;
+  width:100px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #e3e3e3;
+}.agendaViewHeaderButton:hover {
+  background-color:#d1d1d1;
+}.agendaViewHeaderButton:active {
+  position:relative;
+  top:1px;
 }
+
+
+
+.activityViewHeaderButton {
+  -moz-box-shadow:inset 1px 0px 0px 0px #adadad;
+  -webkit-box-shadow:inset 1px 0px 0px 0px #adadad;
+  box-shadow:inset 1px 0px 0px 0px #adadad;
+  background-color:#e0e0e0;
+  -webkit-border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px;
+  border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px;
+  border-bottom-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0px;
+  border:1px solid #999999;
+  display:inline-block;
+  margin-bottom: 10px;
+  color:#777777;
+  font-family:'Patua One';
+  font-size:13px;
+  font-weight:bold;
+  font-style:normal;
+  height:35px;
+  line-height:35px;
+  width:100px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #e3e3e3;
+}.activityViewHeaderButton:hover {
+  background-color:#d1d1d1;
+}.activityViewHeaderButton:active {
+  position:relative;
+  top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
