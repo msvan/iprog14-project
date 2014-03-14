@@ -14,5 +14,18 @@ function ActivityDetailView($target, model) {
   // Take out elements.
   this.$form = this.$el.find('.js-form');
   this.$cancelButton = this.$el.find('.js-cancel');
+  this.$error = this.$el.find('.error');
+
+  // Method for showing an error from an input element.
+  this.showError = function(target, message) {
+    // Remove old error element.
+    this.$el.find('.error-'+target).remove();
+    this.$el.find('[name='+target+']').css('border', '');
+    // Show the new error if we have a message.
+    if (message) {
+      this.$el.find('[name='+target+']').css('border', '1px solid red');
+      $('<div class="error-'+target+'">'+message+'</div>').appendTo(this.$error);
+    }
+  }
 }
 

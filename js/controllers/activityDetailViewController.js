@@ -2,13 +2,26 @@ function ActivityDetailViewController(view, model) {
   // Set up the form handlers.
   view.$form.submit(function(e) {
     e.preventDefault();
-    // Inputs element value -> Object
+    // Input's element value -> Object
     var obj = {};
     view.$form.find("[name]").each(function(idx, e) {
       e = $(e);
       obj[e.attr("name")] = e.val();
     });
     obj.typeid = parseInt(obj.typeid); obj.length = parseInt(obj.length);
+    // Check nonempty values.
+    if (!obj.name.trim()) {
+      view.showError("name", "Please fill in a name for the activity.");
+      return;
+    } else {
+      view.showError("name");
+    }
+    if (isNaN(obj.length)) {
+      view.showError("length", "Please fill in the length of the activity in numbers.");
+      return;
+    } else {
+      view.showError("length");
+    }
     // Add a new model if we're creating one.
     if (model == null) {
 	    model = new Activity(obj.name, obj.length, obj.typeid, obj.description);
