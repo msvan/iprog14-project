@@ -6,7 +6,8 @@
     <title>Meeting Agenda Builder</title>
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Yeseva+One|Josefin+Sans:400,700|Archivo+Black|Montserrat|Didact+Gothic|Allerta|Patua+One' rel='stylesheet' type='text/css'>  </head>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  </head>
   <body>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
@@ -75,16 +76,27 @@
       <div class="activityDetailView js-popup">
         <form class="js-form">
           <div class="form-row error"></div>
-          <div class="form-row"><input type="text" value="<%= name %>" name="name" placeholder="Name..."></div>
-          <div class="form-row"><input type="text" value="<%= length %>" name="length" placeholder="Length..."></div>
-          <div class="form-row"><select name="typeid">
+          <div class="form-row">
+            <label for="input-name">Name</label>
+            <input type="text" id="input-name" value="<%= name %>" name="name" placeholder="Coffee break">
+          </div>
+          <div class="form-row">
+            <label for="input-length">Length</label>
+            <input type="text" id="input-length" value="<%= length %>" name="length" placeholder="10">
+          </div>
+          <div class="form-row">
+            <label for="input-type">Type</label>
+            <select id="input-type" name="typeid">
             <% for (var i = 0; i < ActivityType.length; ++i) { %>
               <option value="<%= i %>" <% if (typeid === i) { %> selected <% } %>><%= ActivityType[i] %></option>
             <% } %>
           </select></div>
-          <div class="form-row"><textarea name="description" placeholder="Description..."><%= description %></textarea></div>
-
           <div class="form-row">
+            <label for="input-description">Description</label>
+            <textarea name="description" id="input-description" placeholder="Much coffee"><%= description %></textarea>
+          </div>
+
+          <div class="form-row action">
             <button type="button" class="js-cancel">Cancel</button>
             <button type="submit" class="js-save">Save</button>
           </div>

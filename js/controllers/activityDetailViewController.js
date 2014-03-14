@@ -17,7 +17,7 @@ function ActivityDetailViewController(view, model) {
       view.showError("name");
     }
     if (isNaN(obj.length)) {
-      view.showError("length", "Please fill in the length of the activity in numbers.");
+      view.showError("length", "Please fill in the length of the activity in minutes.");
       return;
     } else {
       view.showError("length");
