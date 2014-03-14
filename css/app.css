@@ -78,6 +78,7 @@ ul {
   border: 1px solid #aaa;
   border-radius: 2px;
   padding: 2px;
+  color: #666;
 }
 
 .dayViewInfo {
@@ -313,6 +314,10 @@ ul {
   top:1px;
 }
 
+.titleDiv {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eee;
+}
 .titleDiv h1{
   font-weight: normal;
   color: grey;
