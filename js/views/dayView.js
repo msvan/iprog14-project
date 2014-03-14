@@ -11,16 +11,17 @@ function DayView($target, model, agenda) {
   this.$totalLength = this.$el.find('.js-total-length');
   this.$startTime = this.$el.find('.js-start-time');
   this.$distribution = this.$el.find('.js-distribution');
+  this.$breaks = this.$el.find('.js-breaks');
 
   // Create a new 'collection' of activies view list (shared with the activity view).
   this.activitiesView = new ActivityViewList(this.$activityList, model.getActivities(), model.getStart());
   this.activitiesViewController = new ActivityViewListController(this.activitiesView, this.$el.index() - 1, agenda);
-  this.distributionView = new DistributionView(this.$distribution, model);
+  this.distributionView = new DistributionView(this.$distribution, model, this.$breaks);
 
   // Update time information.
   this.updateTime = function() {
     this.$endTime.html(model.getEnd().format("HH:mm"));
-    this.$totalLength.html(model.getTotalLength());
+    this.$totalLength.html(model.getTotalLength()+' min');
   }
   this.$startTime.val(model.getStart().format("HH:mm"));
 

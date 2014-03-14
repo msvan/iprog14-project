@@ -55,7 +55,8 @@
         <div class="dayViewInfo">
           <div>Start time: <input type="text" name="time" class="js-start-time"></div>
           <div>End time: <span class="js-end-time"></span></div>
-          <div>Total length (min): <span class="js-total-length"></span></div>
+          <div>Length: <span class="js-total-length"></span></div>
+          <div class="js-breaks"></div>
         </div>
         <div class="dayViewDistribution js-distribution"></div>
         <ul class="activityViewList sortable"></ul>
@@ -73,6 +74,7 @@
       <div>
       <div class="activityDetailView js-popup">
         <form class="js-form">
+          <div class="form-row error"></div>
           <div class="form-row"><input type="text" value="<%= name %>" name="name" placeholder="Name..."></div>
           <div class="form-row"><input type="text" value="<%= length %>" name="length" placeholder="Length..."></div>
           <div class="form-row"><select name="typeid">

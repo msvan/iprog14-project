@@ -1,4 +1,4 @@
-function DistributionView($target, model) {
+function DistributionView($target, model, $breaksText) {
   this.$el = $target;
 
   // Re-render the activity list.
@@ -16,7 +16,22 @@ function DistributionView($target, model) {
       // Calculate the distribution.
       var percentage = (length / totalLength) * 100;
       // Append the element.
-      $target.append('<div class="distributionViewItem '+type.replace(' ', '-')+'" style="height: '+percentage+'px">');
+      $('<div class="distributionViewItem '+type.replace(' ', '-')+'" style="height: '+percentage+'px">').appendTo($target)
+      // Helpful display of the breaks situation.
+      if (type == "Break") {
+        var text;
+        if (isNaN(percentage)) {
+          text = "";
+        }
+        else if (percentage < 30) {
+          text = "Add more breaks!";
+          $breaksText.css("color", "red");
+        } else {
+          text = "Enough breaks. :)";
+          $breaksText.css("color", "green");
+        }
+        $breaksText.html(text);
+      }
     });
   }
 }

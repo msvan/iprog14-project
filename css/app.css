@@ -10,15 +10,57 @@ ul {
 }
 
 .activityView, .dayView {
-  width: 180px;
+  width: 190px;
   float: left;
   margin-right: 20px;
 }
 
 .activityViewList {
   height: 400px;
-  width: 170px;
+  width: 180px;
   border: 4px dashed #efefef;
+  clear: both;
+}
+
+.activityViewItem {
+  border: 1px solid #bbb;
+  position: relative;
+  margin: 2px;
+}
+
+.activityViewItemLength {
+  position: absolute;
+  padding: 2px 5px;
+}
+.activityViewItemName {
+  padding: 2px 5px;
+}
+
+.activityView .activityViewItemName {
+  margin-left: 55px;
+}
+.activityView .activityViewItemLength {
+  width: 55px;
+}
+
+.dayView .activityViewItemName {
+  margin-left: 50px;
+}
+.dayView .activityViewItemLength {
+  width: 50px;
+}
+
+.activityViewItemName.Break {
+  background: rgba(234, 96, 69, 0.7);
+}
+.activityViewItemName.Presentation {
+  background: rgba(248, 202, 77, 0.7);
+}
+.activityViewItemName.Discussion {
+  background: rgba(63, 86, 102, 0.7);
+}
+.activityViewItemName.Group-Work {
+  background: rgba(245, 229, 192, 0.7);
 }
 .dayView .activityViewList {
   height: 315px;
@@ -99,7 +141,7 @@ ul {
   color:#777777;
   font-family:'Patua One';
   font-size:13px;
-  font-weight:bold;
+  font-weight:normal;
   font-style:normal;
   line-height:25px;
   width:60px;
@@ -132,39 +174,6 @@ ul {
   z-index:1002;
   overflow: auto;
 }
-.activityViewList {
-  clear: both;
-}
-
-.activityViewItem {
-  display: table-row;
-}
-.activityViewItemLength {
-  display: table-cell;
-  padding: 1px 3px;
-}
-.activityViewItemName {
-  display: table-cell;
-  width: 100%;
-  padding: 3px;
-}
-
-.activityViewItemName.Break {
-  background: rgba(234, 96, 69, 0.7);
-  border: 1px #FFA644;
-}
-.activityViewItemName.Presentation {
-  background: rgba(248, 202, 77, 0.7);
-  border: 1px #2C594F;
-}
-.activityViewItemName.Discussion {
-  background: rgba(63, 86, 102, 0.7);
-  border: 1px #002D40;
-}
-.activityViewItemName.Group-Work {
-  background: rgba(245, 229, 192, 0.7);
-  border: 1px #E64661;
-}
 
 
 .agendaViewHeaderButton {
@@ -192,7 +201,7 @@ ul {
   color:#777777;
   font-family:'Patua One';
   font-size:13px;
-  font-weight:bold;
+  font-weight:normal;
   font-style:normal;
   line-height:35px;
   width:100px;
@@ -232,7 +241,7 @@ ul {
   color:#777777;
   font-family:'Patua One';
   font-size:13px;
-  font-weight:bold;
+  font-weight:normal;
   font-style:normal;
   line-height:35px;
   width:100px;
@@ -250,8 +259,13 @@ ul {
 
 .titleDiv h1{
   font-family:'Patua One';
+  font-weight: normal;
   color: grey;
   -webkit-margin-before: 0.1em;
   -webkit-margin-after: 0.5em;
 }
 /* This button was generated using CSSButtonGenerator.com */
+
+.error {
+  color: red;
+}
