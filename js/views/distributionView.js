@@ -6,9 +6,9 @@ function DistributionView($target, model, $breaksText) {
     var totalLength = model.getTotalLength();
 
     // Clear and render divider.
-    $target
-      .html('')
-      .append('<div class="distributionViewItem divider">');
+    var $divider = $('<div class="distributionViewItem divider">')
+      .appendTo($target.empty())
+      .hide();
 
     // Create a distribution element for each type.
     $.each(ActivityType, function(idx, type) {
@@ -16,7 +16,7 @@ function DistributionView($target, model, $breaksText) {
       // Calculate the distribution.
       var percentage = (length / totalLength) * 100;
       // Append the element.
-      $('<div class="distributionViewItem '+type.replace(' ', '-')+'" style="height: '+percentage+'px">').appendTo($target)
+      $('<div class="distributionViewItem '+type.replace(' ', '-')+'" style="height: '+percentage+'px">').appendTo($target);
       // Helpful display of the breaks situation.
       if (type == "Break") {
         var text;
@@ -26,6 +26,7 @@ function DistributionView($target, model, $breaksText) {
         else if (percentage < 30) {
           text = "Add more breaks!";
           $breaksText.css("color", "red");
+          $divider.show();
         } else {
           text = "Enough breaks. :)";
           $breaksText.css("color", "green");

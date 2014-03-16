@@ -74,6 +74,13 @@
     <script type="text/html" id="activityDetailViewTmpl">
       <div>
       <div class="activityDetailView js-popup">
+        <div class="js-popup-header">
+          <% if (name) { %>
+            Edit "<%= name %>"
+          <% } else { %>
+            Create activity
+          <% } %>
+        </div>
         <form class="js-form">
           <div class="form-row error"></div>
           <div class="form-row">
