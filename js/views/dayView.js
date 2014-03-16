@@ -1,6 +1,6 @@
-function DayView($target, model, agenda) {
+function DayView($target, model, agenda, idx) {
   // Render it to the DOM.
-  this.$el = $(tmpl('dayViewTmpl', {})).appendTo($target);
+  this.$el = $(tmpl('dayViewTmpl', {idx: idx})).appendTo($target);
 
   // Save the model on the element for drag & drop interaction.
   this.$el.data('model', model);

@@ -5,5 +5,7 @@ function AgendaView($target, model) {
   // Take out elements.
   this.$addDayButton = this.$el.find('.agendaViewHeaderButton');
   this.$activityViewListTarget = this.$el.find('.activityViewListTarget');
-}
 
+  // Add the group type color info.
+  $(tmpl('infoActivityTypeTmpl', {})).appendTo($target);
+}

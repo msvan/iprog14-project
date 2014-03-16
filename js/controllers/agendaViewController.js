@@ -11,7 +11,7 @@ function AgendaViewController(view, model) {
         return;
       cache.push(1);
       // Create a new day view.
-      var dayView = new DayView(view.$activityViewListTarget, day, model);
+      var dayView = new DayView(view.$activityViewListTarget, day, model, idx);
       var dayViewController = new DayViewController(dayView, day, model);
     });
   }

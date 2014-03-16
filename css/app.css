@@ -10,6 +10,19 @@ ul {
   padding: 0;
 }
 
+.infoActivity {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+}
+.infoActivity .activityViewItemName {
+  float: left;
+  width: 80px;
+  font-size: 12px;
+  text-align: center;
+  margin-right: 2px;
+}
+
 .activityView, .dayView {
   width: 190px;
   float: left;
@@ -65,7 +78,7 @@ ul {
   background: rgba(248, 202, 77, 0.7);
 }
 .activityViewItemName.Discussion {
-  background: rgba(63, 86, 102, 0.7);
+  background: rgba(131, 170, 197, 0.7);
 }
 .activityViewItemName.Group-Work {
   background: rgba(245, 229, 192, 0.7);
@@ -275,7 +288,7 @@ ul {
   border:1px solid #999999;
   display:inline-block;
   margin-bottom: 10px;
-  margin-top: 200px;
+  margin-top: 20px;
   color:#777777;
   font-size:13px;
   font-weight:normal;
