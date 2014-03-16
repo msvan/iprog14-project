@@ -6,7 +6,7 @@
     <title>Meeting Agenda Builder</title>
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Patua+One|' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -52,17 +52,18 @@
 
     <script type="text/html" id="activityViewTmpl">
       <div class="activityView">
-        <h3>Parked activities</h3>
         <div class="activityViewHeader">
           <button type="button" class="activityViewHeaderButton">Add activity</button>
         </div>
+        <div class="activityViewParkedContainer"><h3>Parked activities</h3></div>
+
+        
         <ul class="activityViewList sortable"></ul>
       </div>
     </script>
 
     <script type="text/html" id="dayViewTmpl">
       <div class="dayView">
-        <h3>Day #<%= idx+1 %></h3>
         <div class="dayViewInfo">
           <div>Start time: <input type="text" name="time" class="js-start-time"></div>
           <div>End time: <span class="js-end-time"></span></div>
@@ -70,6 +71,8 @@
           <div class="js-breaks"></div>
         </div>
         <div class="dayViewDistribution js-distribution"></div>
+        <div class="dayViewHeaderContainer"><h3>Day <%= idx+1 %></h3></div>
+
         <ul class="activityViewList sortable"></ul>
       </div>
     </script>
